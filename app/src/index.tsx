@@ -1,10 +1,10 @@
-import { createStore } from 'redux';
-import { enthusiasm } from './reducers/index';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import Hello from './containers/hello';
 import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import Hello from './containers/hello';
 import './index.css';
+import { enthusiasm } from './reducers/index';
 import registerServiceWorker from './registerServiceWorker';
 
 const store = createStore(enthusiasm);

@@ -1,5 +1,5 @@
-import * as React from "react";
-import './hello.css'
+import * as React from 'react';
+import './hello.css';
 
 export interface Props {
   name: string;
@@ -16,10 +16,7 @@ class Hello extends React.Component<Props, State> {
     this.state = { currentEnthusiasm: props.enthusiasmLevel || 1 };
   }
 
-  onIncrement = () => this.updateEnthusiasm(this.state.currentEnthusiasm + 1);
-  onDecrement = () => this.updateEnthusiasm(this.state.currentEnthusiasm - 1);
-
-  render() {
+  public render() {
     const { name } = this.props;
 
     if (this.state.currentEnthusiasm <= 0) {
@@ -27,8 +24,8 @@ class Hello extends React.Component<Props, State> {
     }
 
     return (
-      <div className="hello">
-        <div className="greeting">
+      <div className='hello'>
+        <div className='greeting'>
           Hello {name + getExclamationMarks(this.state.currentEnthusiasm)}
         </div>
         <button onClick={this.onDecrement}>-</button>
@@ -37,7 +34,10 @@ class Hello extends React.Component<Props, State> {
     );
   }
 
-  updateEnthusiasm(currentEnthusiasm: number) {
+  private onIncrement = () => this.updateEnthusiasm(this.state.currentEnthusiasm + 1);
+  private onDecrement = () => this.updateEnthusiasm(this.state.currentEnthusiasm - 1);
+
+  private updateEnthusiasm(currentEnthusiasm: number) {
     this.setState({ currentEnthusiasm });
   }
 }

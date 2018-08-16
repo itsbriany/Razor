@@ -1,10 +1,10 @@
 import { EnthusiasmAction } from '../actions';
+import { DECREMENT_ENTHUSIASM, INCREMENT_ENTHUSIASM } from '../constants/index';
 import { StoreState } from '../types/index';
-import { INCREMENT_ENTHUSIASM, DECREMENT_ENTHUSIASM } from '../constants/index';
 
 const initialState: StoreState = {
   enthusiasmLevel: 1,
-  name: 'TypeScript',
+  name: 'TypeScript'
 };
 
 export function enthusiasm(state: StoreState = initialState, action: EnthusiasmAction): StoreState {

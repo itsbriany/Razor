@@ -1,6 +1,11 @@
 {
-  "extends": [],
-  "defaultSeverity": "warning",
+  "extends": ["tslint:latest", "tslint-react"],
+  "rules": {
+    "trailing-comma": [true, {"multiline": "never", "singleline": "never"}],
+    "quotemark": [true, "single", "jsx-single"],
+    "no-implicit-dependencies": [true, "dev"],
+    "interface-name": [true, "never-prefix"]
+  },
   "linterOptions": {
     "exclude": [
       "config/**/*.js",
