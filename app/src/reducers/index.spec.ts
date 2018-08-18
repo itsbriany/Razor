@@ -1,9 +1,17 @@
+// import { DefaultEnthusiasm } from '../actions';
 import * as constants from '../constants';
-import { enthusiasm } from '../reducers/index';
+// import { EnthusiasmAction } from '../actions';
+import { enthusiasm } from '../reducers';
+import { StoreState } from '../types';
 
 describe('enthusiasm reducer', () => {
   it('should return the initial state', () => {
-    expect(enthusiasm(undefined, {})).toEqual({
+    /*
+    const defaultEnthusiasm: DefaultEnthusiasm = {
+      type: undefined;
+    };
+    */
+    expect(enthusiasm(undefined, { type: undefined })).toEqual({
       enthusiasmLevel: 1,
       name: 'TypeScript'
     });

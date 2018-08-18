@@ -1,4 +1,5 @@
 import * as actions from '.';
+import { DecrementEnthusiasm, IncrementEnthusiasm } from '../actions';
 import * as constants from '../constants';
 
 describe('actions', () => {

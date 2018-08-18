@@ -8,7 +8,7 @@ export interface DecrementEnthusiasm {
   type: constants.DECREMENT_ENTHUSIASM;
 }
 
-export type EnthusiasmAction = IncrementEnthusiasm | DecrementEnthusiasm;
+export type EnthusiasmAction = IncrementEnthusiasm | DecrementEnthusiasm | { type: undefined };
 
 export function incrementEnthusiasm(): IncrementEnthusiasm {
   return {
