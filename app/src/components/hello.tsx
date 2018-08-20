@@ -19,8 +19,8 @@ function Hello({ name, enthusiasmLevel = 1, onIncrement, onDecrement }: Props) {
         Hello {name + getExclamationMarks(enthusiasmLevel)}
       </div>
       <div>
-        <button className='decrementEnthusiasm' onClick={onDecrement}>-</button>
-        <button className='incrementEnthusiasm' onClick={onIncrement}>+</button>
+        <button type='button' className='decrementEnthusiasm btn btn-primary' onClick={onDecrement}>-</button>
+        <button type='button' className='incrementEnthusiasm btn btn-danger' onClick={onIncrement}>+</button>
       </div>
     </div>
   );
